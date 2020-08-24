@@ -85,7 +85,7 @@ public class FileReaderController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 
-		Course c = courseRepository.getOne(id_course);
+		Course c = courseRepository.findById(id_course).orElse(null);
 
 		ResponseEntity<Object> teacherAuthorized = authorizationService.checkAuthorization(c, c.getTeacher());
 		if (teacherAuthorized != null) { // If the user is not the teacher of the course

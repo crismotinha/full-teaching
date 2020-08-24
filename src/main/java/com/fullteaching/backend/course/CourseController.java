@@ -92,7 +92,7 @@ public class CourseController {
 			log.error("Course ID '{}' is not of type Long", id);
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
-		Course course = courseRepository.getOne(id_i);
+		Course course = courseRepository.findById(id_i).orElse(null);
 		return new ResponseEntity<>(course ,HttpStatus.OK);
 	}
 	
@@ -118,7 +118,7 @@ public class CourseController {
 		courseRepository.save(course);
 		courseRepository.flush();
 		
-		course = courseRepository.getOne(course.getId());
+		course = courseRepository.findById(course.getId()).orElse(null);
 		
 		log.info("New course succesfully added: {}", course.toString());
 		
@@ -135,7 +135,7 @@ public class CourseController {
 			return authorized;
 		};
 
-		Course c = courseRepository.getOne(course.getId());
+		Course c = courseRepository.findById(course.getId()).orElse(null);
 		
 		ResponseEntity<Object> teacherAuthorized = authorizationService.checkAuthorization(c, c.getTeacher());
 		if (teacherAuthorized != null) { // If the user is not the teacher of the course
@@ -178,7 +178,7 @@ public class CourseController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 		
-		Course c = courseRepository.getOne(id_course);
+		Course c = courseRepository.findById(id_course).orElse(null);
 		
 		ResponseEntity<Object> teacherAuthorized = authorizationService.checkAuthorization(c, c.getTeacher());
 		if (teacherAuthorized != null) { // If the user is not the teacher of the course
@@ -228,7 +228,7 @@ public class CourseController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 
-		Course c = courseRepository.getOne(id_course);
+		Course c = courseRepository.findById(id_course).orElse(null);
 		
 		ResponseEntity<Object> teacherAuthorized = authorizationService.checkAuthorization(c, c.getTeacher());
 		if (teacherAuthorized != null) { // If the user is not the teacher of the course
@@ -304,7 +304,7 @@ public class CourseController {
 			return authorized;
 		};
 
-		Course c = courseRepository.getOne(course.getId());
+		Course c = courseRepository.findById(course.getId()).orElse(null);
 		
 		ResponseEntity<Object> teacherAuthorized = authorizationService.checkAuthorization(c, c.getTeacher());
 		if (teacherAuthorized != null) { // If the user is not the teacher of the course

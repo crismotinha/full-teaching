@@ -70,7 +70,7 @@ public class FileGroupController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 		
-		CourseDetails cd = courseDetailsRepository.getOne(id_i);
+		CourseDetails cd = courseDetailsRepository.findById(id_i).orElse(null);
 		
 		ResponseEntity<Object> teacherAuthorized = authorizationService.checkAuthorization(cd, cd.getCourse().getTeacher());
 		if (teacherAuthorized != null) { // If the user is not the teacher of the course
@@ -92,13 +92,13 @@ public class FileGroupController {
 			
 			//fileGroup is a child of an existing FileGroup
 			else{
-				FileGroup fParent = fileGroupRepository.getOne(fileGroup.getFileGroupParent().getId());
+				FileGroup fParent = fileGroupRepository.findById(fileGroup.getFileGroupParent().getId()).orElse(null);
 				if(fParent != null){
 					fParent.getFileGroups().add(fileGroup);
 					/*Saving the modified parent FileGroup: Cascade relationship between FileGroup and 
 					 its FileGroup children will add the new fileGroup to FileGroupRepository*/
 					fileGroupRepository.save(fParent);
-					CourseDetails cd2 = courseDetailsRepository.getOne(id_i);
+					CourseDetails cd2 = courseDetailsRepository.findById(id_i).orElse(null);
 					
 					log.info("New file sub-group succesfully added: {}", fileGroup.toString());
 					
@@ -130,14 +130,14 @@ public class FileGroupController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 		
-		Course c = courseRepository.getOne(id_course);
+		Course c = courseRepository.findById(id_course).orElse(null);
 		
 		ResponseEntity<Object> teacherAuthorized = authorizationService.checkAuthorization(c, c.getTeacher());
 		if (teacherAuthorized != null) { // If the user is not the teacher of the course
 			return teacherAuthorized;
 		} else {
 		
-			FileGroup fg = fileGroupRepository.getOne(fileGroup.getId());
+			FileGroup fg = fileGroupRepository.findById(fileGroup.getId()).orElse(null);
 			
 			if (fg != null){
 				
@@ -182,14 +182,14 @@ public class FileGroupController {
 		}
 		
 		
-		Course c = courseRepository.getOne(id_course);
+		Course c = courseRepository.findById(id_course).orElse(null);
 		
 		ResponseEntity<Object> teacherAuthorized = authorizationService.checkAuthorization(c, c.getTeacher());
 		if (teacherAuthorized != null) { // If the user is not the teacher of the course
 			return teacherAuthorized;
 		} else {
 		
-			FileGroup fg = fileGroupRepository.getOne(id_fileGroup);
+			FileGroup fg = fileGroupRepository.findById(id_fileGroup).orElse(null);
 			
 			if (fg != null){
 				
@@ -260,16 +260,16 @@ public class FileGroupController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 		
-		Course c = courseRepository.getOne(id_course);
+		Course c = courseRepository.findById(id_course).orElse(null);
 		
 		ResponseEntity<Object> teacherAuthorized = authorizationService.checkAuthorization(c, c.getTeacher());
 		if (teacherAuthorized != null) { // If the user is not the teacher of the course
 			return teacherAuthorized;
 		} else {
 		
-			FileGroup sourceFg = fileGroupRepository.getOne(id_source);
-			FileGroup targetFg = fileGroupRepository.getOne(id_target);
-			File fileMoved = fileRepository.getOne(id_file);
+			FileGroup sourceFg = fileGroupRepository.findById(id_source).orElse(null);
+			FileGroup targetFg = fileGroupRepository.findById(id_target).orElse(null);
+			File fileMoved = fileRepository.findById(id_file).orElse(null);
 			
 			log.info("Moving file {} from filegroup {} to filegroup {} into position {}", fileMoved, sourceFg, targetFg, pos);
 			
@@ -316,14 +316,14 @@ public class FileGroupController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 		
-		Course c = courseRepository.getOne(id_course);
+		Course c = courseRepository.findById(id_course).orElse(null);
 		
 		ResponseEntity<Object> teacherAuthorized = authorizationService.checkAuthorization(c, c.getTeacher());
 		if (teacherAuthorized != null) { // If the user is not the teacher of the course
 			return teacherAuthorized;
 		} else {
 		
-			FileGroup fg = fileGroupRepository.getOne(id_fileGroup);
+			FileGroup fg = fileGroupRepository.findById(id_fileGroup).orElse(null);
 			
 			if (fg != null){
 				for (int i = 0; i < fg.getFiles().size(); i++){
@@ -377,14 +377,14 @@ public class FileGroupController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 		
-		Course c = courseRepository.getOne(id_course);
+		Course c = courseRepository.findById(id_course).orElse(null);
 		
 		ResponseEntity<Object> teacherAuthorized = authorizationService.checkAuthorization(c, c.getTeacher());
 		if (teacherAuthorized != null) { // If the user is not the teacher of the course
 			return teacherAuthorized;
 		} else {
 		
-			FileGroup fg = fileGroupRepository.getOne(id_fileGroup);
+			FileGroup fg = fileGroupRepository.findById(id_fileGroup).orElse(null);
 			
 			if (fg != null){
 				File file = null;

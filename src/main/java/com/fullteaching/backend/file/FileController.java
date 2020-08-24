@@ -91,7 +91,7 @@ public class FileController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 
-		Course c = courseRepository.getOne(id_course);
+		Course c = courseRepository.findById(id_course).orElse(null);
 
 		ResponseEntity<Object> teacherAuthorized = authorizationService.checkAuthorization(c, c.getTeacher());
 		if (teacherAuthorized != null) { // If the user is not the teacher of the course
@@ -144,7 +144,7 @@ public class FileController {
 					customFile.setLink(uploadedFile.getPath());
 					// ONLY ON DEVELOPMENT
 				}
-				fg = fileGroupRepository.getOne(id_fileGroup);
+				fg = fileGroupRepository.findById(id_fileGroup).orElse(null);
 				fg.getFiles().add(customFile);
 				fg.updateFileIndexOrder();
 				log.info("File succesfully uploaded to path '{}'", uploadedFile.getPath());
@@ -178,7 +178,7 @@ public class FileController {
 			return;
 		}
 
-		Course c = courseRepository.getOne(id_course);
+		Course c = courseRepository.findById(id_course).orElse(null);
 
 		ResponseEntity<Object> userAuthorized = authorizationService.checkAuthorizationUsers(c, c.getAttenders());
 		if (userAuthorized != null) { // If the user is not an attender of the course
@@ -186,7 +186,7 @@ public class FileController {
 			return;
 		} else {
 
-			com.fullteaching.backend.file.File f = fileRepository.getOne(id_file);
+			com.fullteaching.backend.file.File f = fileRepository.findById(id_file).orElse(null);
 
 			if (f != null) {
 				
@@ -246,7 +246,7 @@ public class FileController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 
-		User u = userRepository.getOne(id_user);
+		User u = userRepository.findById(id_user).orElse(null);
 
 		ResponseEntity<Object> userAuthorized = authorizationService.checkAuthorization(u, this.user.getLoggedUser());
 		if (userAuthorized != null) { // If the user is not the teacher of the course

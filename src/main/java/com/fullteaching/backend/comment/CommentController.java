@@ -64,7 +64,7 @@ public class CommentController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 		
-		CourseDetails cd = courseDetailsRepository.getOne(id_courseDetails);
+		CourseDetails cd = courseDetailsRepository.findById(id_courseDetails).orElse(null);
 		
 		ResponseEntity<Object> userAuthorized = authorizationService.checkAuthorizationUsers(cd, cd.getCourse().getAttenders());
 		if (userAuthorized != null) { // If the user is not an attender of the course
@@ -80,7 +80,7 @@ public class CommentController {
 			//The comment is a root comment
 			if (comment.getCommentParent() == null) {
 				log.info("Adding new root comment");
-				Entry entry = entryRepository.getOne(id_entry);
+				Entry entry = entryRepository.findById(id_entry).orElse(null);
 				if(entry != null) {
 					entry.getComments().add(comment);
 					/*Saving the modified entry: Cascade relationship between entry and comments
@@ -99,13 +99,13 @@ public class CommentController {
 			//The comment is a replay to another existing comment
 			else{
 				log.info("Adding new comment reply");
-				Comment cParent = commentRepository.getOne(comment.getCommentParent().getId());
+				Comment cParent = commentRepository.findById(comment.getCommentParent().getId()).orElse(null);
 				if(cParent != null){
 					cParent.getReplies().add(comment);
 					/*Saving the modified parent comment: Cascade relationship between comment and 
 					 its replies will add the new comment to CommentRepository*/
 					commentRepository.save(cParent);
-					Entry entry = entryRepository.getOne(id_entry);
+					Entry entry = entryRepository.findById(id_entry).orElse(null);
 					
 					log.info("New comment succesfully added: {}", comment.toString());
 					

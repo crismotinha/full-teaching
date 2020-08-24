@@ -48,7 +48,7 @@ public class SessionController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 		
-		Course course = courseRepository.getOne(id_i);
+		Course course = courseRepository.findById(id_i).orElse(null);
 		
 		ResponseEntity<Object> teacherAuthorized = authorizationService.checkAuthorization(course, course.getTeacher());
 		if (teacherAuthorized != null) { // If the user is not the teacher of the course
@@ -80,7 +80,7 @@ public class SessionController {
 			return authorized;
 		};
 		
-		Session s = sessionRepository.getOne(session.getId());
+		Session s = sessionRepository.findById(session.getId()).orElse(null);
 		
 		log.info("Updating session. Previous value: {}", s.toString());
 		
@@ -119,14 +119,14 @@ public class SessionController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 		
-		Session session = sessionRepository.getOne(id_i);
+		Session session = sessionRepository.findById(id_i).orElse(null);
 		
 		ResponseEntity<Object> teacherAuthorized = authorizationService.checkAuthorization(session, session.getCourse().getTeacher());
 		if (teacherAuthorized != null) { // If the user is not the teacher of the course
 			return teacherAuthorized;
 		} else {
 		
-			Course course = courseRepository.getOne(session.getCourse().getId());
+			Course course = courseRepository.findById(session.getCourse().getId()).orElse(null);
 			if (course != null){
 				
 				log.info("Deleting session: {}", session.toString());
