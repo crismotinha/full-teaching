@@ -79,7 +79,7 @@ var AppComponent = /** @class */ (function () {
     var _a;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/app.component.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/app.component.js.map
 
 /***/ }),
 
@@ -244,7 +244,7 @@ var AppModule = /** @class */ (function () {
     return AppModule;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/app.module.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/app.module.js.map
 
 /***/ }),
 
@@ -295,7 +295,7 @@ var appRoutes = [
     },
 ];
 var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* RouterModule */].forRoot(appRoutes);
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/app.routing.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/app.routing.js.map
 
 /***/ }),
 
@@ -341,7 +341,7 @@ var AuthGuard = /** @class */ (function () {
     var _a, _b;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/auth.guard.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/auth.guard.js.map
 
 /***/ }),
 
@@ -361,7 +361,7 @@ var Chatline = /** @class */ (function () {
     return Chatline;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/chatline.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/chatline.js.map
 
 /***/ }),
 
@@ -380,7 +380,7 @@ var Comment = /** @class */ (function () {
     return Comment;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/comment.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/comment.js.map
 
 /***/ }),
 
@@ -398,7 +398,7 @@ var CourseDetails = /** @class */ (function () {
     return CourseDetails;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/course-details.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/course-details.js.map
 
 /***/ }),
 
@@ -419,7 +419,7 @@ var Course = /** @class */ (function () {
     return Course;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/course.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/course.js.map
 
 /***/ }),
 
@@ -437,7 +437,7 @@ var Entry = /** @class */ (function () {
     return Entry;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/entry.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/entry.js.map
 
 /***/ }),
 
@@ -456,7 +456,7 @@ var FileGroup = /** @class */ (function () {
     return FileGroup;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/file-group.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/file-group.js.map
 
 /***/ }),
 
@@ -474,7 +474,7 @@ var File = /** @class */ (function () {
     return File;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/file.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/file.js.map
 
 /***/ }),
 
@@ -491,7 +491,7 @@ var Forum = /** @class */ (function () {
     return Forum;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/forum.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/forum.js.map
 
 /***/ }),
 
@@ -510,7 +510,7 @@ var Session = /** @class */ (function () {
     return Session;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/session.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/session.js.map
 
 /***/ }),
 
@@ -532,7 +532,7 @@ var User = /** @class */ (function () {
     return User;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/user.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/user.js.map
 
 /***/ }),
 
@@ -704,7 +704,7 @@ var CalendarComponent = /** @class */ (function () {
     var _a, _b;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/calendar.component.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/calendar.component.js.map
 
 /***/ }),
 
@@ -770,7 +770,7 @@ var ChatLineComponent = /** @class */ (function () {
     var _a;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/chat-line.component.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/chat-line.component.js.map
 
 /***/ }),
 
@@ -850,7 +850,7 @@ var CommentComponent = /** @class */ (function () {
     var _a, _b, _c;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/comment.component.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/comment.component.js.map
 
 /***/ }),
 
@@ -1552,7 +1552,7 @@ var CourseDetailsComponent = /** @class */ (function () {
     var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/course-details.component.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/course-details.component.js.map
 
 /***/ }),
 
@@ -1718,7 +1718,7 @@ var DashboardComponent = /** @class */ (function () {
     var _a, _b, _c, _d;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/dashboard.component.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/dashboard.component.js.map
 
 /***/ }),
 
@@ -1805,7 +1805,7 @@ var ErrorMessageComponent = /** @class */ (function () {
     return ErrorMessageComponent;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/error-message.component.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/error-message.component.js.map
 
 /***/ }),
 
@@ -1986,7 +1986,7 @@ var FileGroupComponent = /** @class */ (function () {
     var _a, _b, _c, _d, _e, _f;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/file-group.component.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/file-group.component.js.map
 
 /***/ }),
 
@@ -2138,7 +2138,7 @@ var FileUploaderComponent = /** @class */ (function () {
     var _a;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/file-uploader.component.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/file-uploader.component.js.map
 
 /***/ }),
 
@@ -2199,7 +2199,7 @@ var FooterComponent = /** @class */ (function () {
     return FooterComponent;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/footer.component.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/footer.component.js.map
 
 /***/ }),
 
@@ -2408,7 +2408,7 @@ var LoginModalComponent = /** @class */ (function () {
     var _a, _b, _c, _d;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/login-modal.component.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/login-modal.component.js.map
 
 /***/ }),
 
@@ -2490,7 +2490,7 @@ var NavbarComponent = /** @class */ (function () {
     var _a, _b, _c;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/navbar.component.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/navbar.component.js.map
 
 /***/ }),
 
@@ -2562,7 +2562,7 @@ var PresentationComponent = /** @class */ (function () {
     var _a, _b;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/presentation.component.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/presentation.component.js.map
 
 /***/ }),
 
@@ -2715,7 +2715,7 @@ var SettingsComponent = /** @class */ (function () {
     var _a, _b, _c;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/settings.component.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/settings.component.js.map
 
 /***/ }),
 
@@ -2810,7 +2810,7 @@ var StreamComponent = /** @class */ (function () {
     var _a, _b;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/stream.component.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/stream.component.js.map
 
 /***/ }),
 
@@ -3279,7 +3279,7 @@ var VideoSessionComponent = /** @class */ (function () {
     var _a, _b, _c, _d, _e;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/video-session.component.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/video-session.component.js.map
 
 /***/ }),
 
@@ -3294,7 +3294,7 @@ var Constants = Object.freeze({
     PASS_REGEX: '^((?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,20})$',
     FILE_SIZE_LIMIT: 5 * 1024 * 1024 //5MB
 });
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/constants.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/constants.js.map
 
 /***/ }),
 
@@ -3308,7 +3308,7 @@ var Constants = Object.freeze({
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__app_module__["a"]; });
 
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/index.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/index.js.map
 
 /***/ }),
 
@@ -3344,7 +3344,7 @@ var InterventionAskedPipe = /** @class */ (function () {
     return InterventionAskedPipe;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/intervention-asked.pipe.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/intervention-asked.pipe.js.map
 
 /***/ }),
 
@@ -3383,7 +3383,7 @@ var AnimationService = /** @class */ (function () {
     return AnimationService;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/animation.service.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/animation.service.js.map
 
 /***/ }),
 
@@ -3522,7 +3522,7 @@ function utf8_to_b64(str) {
         return String.fromCharCode('0x' + p1);
     }));
 }
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/authentication.service.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/authentication.service.js.map
 
 /***/ }),
 
@@ -3563,7 +3563,7 @@ var CourseDetailsModalDataService = /** @class */ (function () {
     return CourseDetailsModalDataService;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/course-details-modal-data.service.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/course-details-modal-data.service.js.map
 
 /***/ }),
 
@@ -3707,7 +3707,7 @@ var CourseService = /** @class */ (function () {
     var _a, _b;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/course.service.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/course.service.js.map
 
 /***/ }),
 
@@ -3877,7 +3877,7 @@ var FileService = /** @class */ (function () {
     var _a, _b;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/file.service.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/file.service.js.map
 
 /***/ }),
 
@@ -3924,7 +3924,7 @@ var FilesEditionService = /** @class */ (function () {
     return FilesEditionService;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/files-edition.service.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/files-edition.service.js.map
 
 /***/ }),
 
@@ -4019,7 +4019,7 @@ var ForumService = /** @class */ (function () {
     var _a, _b;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/forum.service.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/forum.service.js.map
 
 /***/ }),
 
@@ -4056,7 +4056,7 @@ var LoginModalService = /** @class */ (function () {
     return LoginModalService;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/login-modal.service.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/login-modal.service.js.map
 
 /***/ }),
 
@@ -4142,7 +4142,7 @@ var SessionService = /** @class */ (function () {
     var _a, _b;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/session.service.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/session.service.js.map
 
 /***/ }),
 
@@ -4179,7 +4179,7 @@ var UploaderModalService = /** @class */ (function () {
     return UploaderModalService;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/uploader-modal.service.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/uploader-modal.service.js.map
 
 /***/ }),
 
@@ -4262,7 +4262,7 @@ var UserService = /** @class */ (function () {
     var _a;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/user.service.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/user.service.js.map
 
 /***/ }),
 
@@ -4329,7 +4329,7 @@ var VideoSessionService = /** @class */ (function () {
     var _a;
 }());
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/video-session.service.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/video-session.service.js.map
 
 /***/ }),
 
@@ -4350,7 +4350,7 @@ var environment = {
     PUBLIC_RECAPTCHA_KEY: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
     OPENVIDU_URL: 'wss://localhost:8443/'
 };
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/environment.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/environment.js.map
 
 /***/ }),
 
@@ -4373,7 +4373,7 @@ if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment *
     Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["enableProdMode"])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_4__app___["a" /* AppModule */]);
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/main.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/main.js.map
 
 /***/ }),
 
@@ -4431,7 +4431,7 @@ Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* pl
 
 
 
-//# sourceMappingURL=/home/vania/full-teaching-experiment/src/main/angular/src/polyfills.js.map
+//# sourceMappingURL=/home/crismotinha/Documents/UFF/full-teaching/src/main/angular/src/polyfills.js.map
 
 /***/ }),
 

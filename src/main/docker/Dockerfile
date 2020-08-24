@@ -1,5 +1,5 @@
 FROM java:8
-
+ENTRYPOINT ["sh", "/usr/local/bin/docker-entrypoint.sh"]
 ## Add the init script to the image
 ADD init.sh init.sh
 RUN chmod +x /init.sh
@@ -7,6 +7,7 @@ RUN chmod +x /init.sh
 ## Add the wait script to the image
 ADD wait.sh wait.sh
 RUN chmod +x /wait.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 RUN apt-get update
 RUN apt-get install netcat-openbsd
