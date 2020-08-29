@@ -67,6 +67,16 @@ class CourseTest {
     }
 
     @Test
+    public void Course_Equals_WhenOtherCourseIsNotACourse_ShouldReturnFalse() {
+        User teacher = mock(User.class);
+
+        Course course = new Course(stringDefault, stringDefault, teacher);
+        String notCourse = "not a course";
+
+        Assert.isTrue(course.equals(notCourse) == false, "Users are not equal");
+    }
+
+    @Test
     public void Course_Equals_WhenOtherUserIsItself_ShouldReturnTrue() {
         User teacher = mock(User.class);
 

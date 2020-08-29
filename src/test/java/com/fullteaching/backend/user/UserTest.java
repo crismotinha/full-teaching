@@ -59,6 +59,14 @@ class UserTest {
     }
 
     @Test
+    public void User_Equals_WhenOtherUserIsNotAUser_ShouldReturnFalse() {
+        User user = new User(stringDefault, stringDefault, stringDefault, stringDefault, stringDefault);
+        String notUser = "not a user";
+
+        Assert.isTrue(user.equals(notUser) == false, "Users are not equal");
+    }
+
+    @Test
     public void User_Equals_WhenOtherUserIsItself_ShouldReturnTrue() {
         User user = new User(stringDefault, stringDefault, stringDefault, stringDefault, stringDefault);
 
