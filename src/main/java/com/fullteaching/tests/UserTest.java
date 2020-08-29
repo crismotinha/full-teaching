@@ -8,6 +8,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 
 public class UserTest {
@@ -100,5 +103,32 @@ public class UserTest {
         WebElement errorMessage = driver.findElement(By.xpath("/html/body/app/div/main/app-presentation/login-modal/div/div[1]/div/form/app-error-message/div/h5"));
 
         Assert.assertTrue(errorMessage.getText().equals("Invalid field"));
+    }
+
+    @Test
+    public void CriarNovoCursoComSucesso() throws InterruptedException {
+        driver.get(url);
+        Thread.sleep(500);
+        Teacher teacher = PageFactory.initElements(driver, Teacher.class);
+        teacher.logIn();
+        Thread.sleep(1500);
+
+        WebElement addCourse = driver.findElement(By.id("add-course-icon"));
+        addCourse.click();
+
+        String expectedTitle = "Titulo";
+
+        WebElement title = driver.findElement(By.id("input-post-course-name"));
+        title.sendKeys(expectedTitle);
+
+        WebElement submit = driver.findElement(By.id("submit-post-course-btn"));
+        submit.click();
+
+        List<WebElement> coursesTitles = driver.findElements(By.className("title"));
+        for (WebElement course : coursesTitles) {
+            if (course.getText().equals(expectedTitle)) {
+                Assert.assertTrue(true);
+            }
+        }
     }
 }
