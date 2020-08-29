@@ -64,4 +64,12 @@ class UserTest {
 
         Assert.isTrue(user.equals(user) == true, "Users are equal");
     }
+
+    @Test
+    public void User_Hashcode_ShouldReturnNameHashcode() {
+        User user = new User(stringDefault, stringDefault, stringDefault, stringDefault, stringDefault);
+
+        Assert.isTrue(user.hashCode() == user.getName().hashCode(), "User hashcode is Name Hashcode");
+    }
+
 }
