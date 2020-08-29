@@ -1,0 +1,355 @@
+{
+  "info": {
+    "_postman_id": "937ce205-d44b-47dc-a45a-a594e6c0e6e1",
+    "name": "Fullteaching",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Novo Usuário com email invalido",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "a10fac82-3460-4e94-b1dd-6913d8ced0e8",
+            "exec": [
+              "pm.test(\"Deve retornar forbidden (403)\", function () {",
+              "    pm.response.to.have.status(403);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "cache-control",
+            "value": "no-cache"
+          },
+          {
+            "key": "content-type",
+            "value": "application/json"
+          },
+          {
+            "key": "postman-token",
+            "value": "839a98f7-f75b-2fd0-4f13-9ee647369461"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\"testeemail.com\",\"P4ssw0rd!\",\"aluno\",\"captcha\"]"
+        },
+        "url": {
+          "raw": "https://localhost:5000/api-users/new",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api-users",
+            "new"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Novo Usuário com email repetido",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "a10fac82-3460-4e94-b1dd-6913d8ced0e8",
+            "exec": [
+              "pm.test(\"Deve retornar conflito (409)\", function () {",
+              "    pm.response.to.have.status(409);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "cache-control",
+            "value": "no-cache"
+          },
+          {
+            "key": "content-type",
+            "value": "application/json"
+          },
+          {
+            "key": "postman-token",
+            "value": "839a98f7-f75b-2fd0-4f13-9ee647369461"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\"teste@email.com\",\"P4ssw0rd!\",\"aluno\",\"captcha\"]"
+        },
+        "url": {
+          "raw": "https://localhost:5000/api-users/new",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api-users",
+            "new"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Novo Usuário com senha inválida",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "a10fac82-3460-4e94-b1dd-6913d8ced0e8",
+            "exec": [
+              "pm.test(\"Deve retornar 400 - bad request\", function () {",
+              "    pm.response.to.have.status(400);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "cache-control",
+            "value": "no-cache"
+          },
+          {
+            "key": "content-type",
+            "value": "application/json"
+          },
+          {
+            "key": "postman-token",
+            "value": "839a98f7-f75b-2fd0-4f13-9ee647369461"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\"testeAlunaNova@email.com\",\"senhafraca\",\"TESTE\",\"captcha\"]"
+        },
+        "url": {
+          "raw": "https://localhost:5000/api-users/new",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api-users",
+            "new"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Novo Usuário",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "a10fac82-3460-4e94-b1dd-6913d8ced0e8",
+            "exec": [
+              "pm.test(\"Deve retornar 201 Created\", function () {",
+              "    pm.response.to.have.status(201);",
+              "});",
+              "",
+              "pm.test(\"Deve ter uma resposta em json\", function () {",
+              "     pm.response.to.be.withBody;",
+              "     pm.response.to.be.json;",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "cache-control",
+            "value": "no-cache"
+          },
+          {
+            "key": "content-type",
+            "value": "application/json"
+          },
+          {
+            "key": "postman-token",
+            "value": "839a98f7-f75b-2fd0-4f13-9ee647369461"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\"aluno@email.com\",\"P4ssw0rd!\",\"Aluno\",\"captcha\"]"
+        },
+        "url": {
+          "raw": "https://localhost:5000/api-users/new",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api-users",
+            "new"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "My Courses sem autenticação",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "f8e70cdb-ba06-49fd-aed0-8ac03c9c5887",
+            "exec": [
+              "pm.test(\"Deve retornar não autorizado 401\", function () {",
+              "    pm.response.to.have.status(401);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:5000/api-courses/user/86",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api-courses",
+            "user",
+            "86"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "My Courses com autenticação",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "f8e70cdb-ba06-49fd-aed0-8ac03c9c5887",
+            "exec": [
+              "pm.test(\"Deve retornar ok 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disabledSystemHeaders": {
+          "host": true,
+          "user-agent": true,
+          "accept": true,
+          "accept-encoding": true,
+          "connection": true
+        }
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "GET /api-courses/user/86 HTTP/1.1",
+            "value": "",
+            "type": "text",
+            "disabled": true
+          },
+          {
+            "key": "Host",
+            "value": " localhost:5000",
+            "type": "text"
+          },
+          {
+            "key": "User-Agent",
+            "value": " Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": " application/json, text/plain, */*",
+            "type": "text"
+          },
+          {
+            "key": "Accept-Language",
+            "value": " en-US,en;q=0.5",
+            "type": "text"
+          },
+          {
+            "key": "Accept-Encoding",
+            "value": " gzip, deflate, br",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": " application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": " Bearer null",
+            "type": "text"
+          },
+          {
+            "key": "Connection",
+            "value": " keep-alive",
+            "type": "text"
+          },
+          {
+            "key": "Referer",
+            "value": " https://localhost:5000/courses",
+            "type": "text"
+          },
+          {
+            "key": "Cookie",
+            "value": " JSESSIONID=EE58FF93A39766A1E9835A541BDAA1EB",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://localhost:5000/api-courses/user/100",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api-courses",
+            "user",
+            "100"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
