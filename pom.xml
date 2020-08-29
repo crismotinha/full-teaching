@@ -107,7 +107,52 @@
 			            <include>**/*Test.*</include>
 			        </includes>
 			    </configuration>
-			</plugin>			
+			</plugin>
+			<plugin>
+				<groupId>org.pitest</groupId>
+				<artifactId>pitest-maven</artifactId>
+				<version>1.5.2</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.junit.platform</groupId>
+						<artifactId>junit-platform-surefire-provider</artifactId>
+						<version>1.2.0-M1</version>
+					</dependency>
+					<dependency>
+						<groupId>org.junit.jupiter</groupId>
+						<artifactId>junit-jupiter-engine</artifactId>
+						<version>5.2.0-M1</version>
+					</dependency>
+				</dependencies>
+				<configuration>
+					<targetClasses>
+						<param>com.fullteaching.backend.user.User</param>
+						<param>com.fullteaching.backend.course.Course</param>
+					</targetClasses>
+					<targetTests>
+						<param>com.fullteaching.backend.user.User</param>
+						<param>com.fullteaching.backend.course.Course</param>
+					</targetTests>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.21.0</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.junit.platform</groupId>
+						<artifactId>junit-platform-surefire-provider</artifactId>
+						<version>1.2.0-M1</version>
+					</dependency>
+					<dependency>
+						<groupId>org.junit.jupiter</groupId>
+						<artifactId>junit-jupiter-engine</artifactId>
+						<version>5.2.0-M1</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
 
 		</plugins>
 	</build>
