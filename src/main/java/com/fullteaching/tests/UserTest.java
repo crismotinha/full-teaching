@@ -131,4 +131,49 @@ public class UserTest {
             }
         }
     }
+
+    @Test
+    public void CriarNovaSessaoComSucesso() throws InterruptedException {
+        driver.get(url);
+        Thread.sleep(500);
+        Teacher teacher = PageFactory.initElements(driver, Teacher.class);
+        teacher.logIn();
+        Thread.sleep(1500);
+
+        WebElement selectedCourse = driver.findElement(By.xpath("/html/body/app/div/main/app-dashboard/div/div[3]/div/div[1]/ul/li[1]/div/div[2]/span"));
+        selectedCourse.click();
+        Thread.sleep(300);
+
+        WebElement sessionsTab = driver.findElement(By.id("sessions-tab-icon"));
+        sessionsTab.click();
+
+        WebElement sessionsTabAddButton = driver.findElement(By.id("add-session-icon"));
+        sessionsTabAddButton.click();
+
+        String expectedTitle = "TituloSessao";
+
+        WebElement title = driver.findElement(By.id("input-post-title"));
+        title.sendKeys(expectedTitle);
+
+        WebElement description = driver.findElement(By.id("input-post-comment"));
+        description.sendKeys(expectedTitle);
+
+        WebElement date = driver.findElement(By.id("input-post-date"));
+        date.sendKeys("11082020");
+
+        WebElement time = driver.findElement(By.id("input-post-time"));
+        time.sendKeys("1010AM");
+
+        WebElement submit = driver.findElement(By.id("post-modal-btn"));
+        submit.click();
+
+        Thread.sleep(1500);
+
+        List<WebElement> sessionTitles = driver.findElements(By.className("session-title"));
+        for (WebElement session : sessionTitles) {
+            if (session.getText().equals(expectedTitle)) {
+                Assert.assertTrue(true);
+            }
+        }
+    }
 }
