@@ -10,15 +10,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserTest {
     String stringDefault = "abc";
 
-    @BeforeEach
-    void setUp() {
-
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
     public void User_toString_ShouldReturnNickname() {
         String nickname = "z";
